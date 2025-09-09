@@ -637,3 +637,131 @@ body.dark-theme {
 .card-ilustracoes .animated-gif {
     background-image: url('media/projetos/preview-ilustracoes.gif');
 }
+
+/* --- REGRAS DE RESPONSIVIDADE (REFINADAS) --- */
+
+/* Para telas de tablets e celulares maiores (até 900px de largura) */
+@media (max-width: 900px) {
+    
+    .about-content {
+        flex-direction: column; /* Texto e imagens um sobre o outro */
+        gap: 60px; /* Mais espaço entre o texto e as imagens */
+    }
+
+    .about-text-container,
+    .about-images-container {
+        flex: none; 
+        width: 100%;
+        padding: 0 20px; /* Ajusta o padding para telas menores */
+    }
+
+    /* Ajustes para o container das imagens para acomodar o empilhamento */
+    .about-images-container {
+        position: relative; /* Mantém a referência para os placeholders absolutos */
+        min-height: 600px; /* **Crucial:** Aumenta a altura mínima para caberem as 3 imagens */
+        display: block; /* Garante que o container se comporte como um bloco */
+    }
+
+    /* Re-posiciona e redimensiona as imagens para o empilhamento em mobile */
+    .image-placeholder {
+        width: 250px; /* Tamanho base um pouco maior para tablets */
+        height: 250px;
+        position: absolute; /* Mantém a posição absoluta */
+        left: 50%; /* Centraliza horizontalmente */
+    }
+
+    /* Posições relativas para o empilhamento vertical */
+    .placeholder-one { 
+        top: 0; 
+        transform: translateX(-50%) rotate(-7deg); /* Centraliza e rotaciona */
+        z-index: 3; /* Garante a ordem de empilhamento */
+    }
+    .placeholder-two { 
+        top: 150px; /* Desloca para baixo */
+        transform: translateX(-40%) rotate(3deg); /* Desloca ligeiramente para a direita e rotaciona */
+        z-index: 2;
+    }
+    .placeholder-three { 
+        top: 300px; /* Desloca ainda mais para baixo */
+        transform: translateX(-60%) rotate(-5deg); /* Desloca ligeiramente para a esquerda e rotaciona */
+        z-index: 1;
+    }
+}
+
+
+/* Para telas de celulares (até 768px de largura) */
+@media (max-width: 768px) {
+
+    /* --- Ajustes na Seção Principal "Hero" --- */
+    .hero {
+        min-height: 70vh; 
+    }
+
+    .hero-title {
+        font-size: 18vw; 
+    }
+
+    .cta-button {
+        padding: 15px 35px; 
+        font-size: 16px;
+    }
+    
+    /* --- Ajustes na Seção "Sobre Mim" (Mobile específico) --- */
+    .about-section {
+        padding: 60px 20px; 
+    }
+
+    .about-text-container h2 {
+        font-size: 2.5em; 
+    }
+
+    .image-placeholder {
+        width: 200px; /* Diminui o tamanho dos quadrados de imagem para celulares */
+        height: 200px;
+    }
+
+    /* Reajuste o empilhamento para celulares */
+    .placeholder-one { 
+        top: 0; 
+        transform: translateX(-50%) rotate(-7deg); 
+    }
+    .placeholder-two { 
+        top: 120px; /* Mais próximos */
+        transform: translateX(-40%) rotate(3deg); 
+    }
+    .placeholder-three { 
+        top: 240px; /* Mais próximos */
+        transform: translateX(-60%) rotate(-5deg); 
+    }
+
+    /* Reduz a altura mínima do container das imagens para celulares menores */
+    .about-images-container {
+        min-height: 450px; /* Altura ajustada para 3 imagens de 200px */
+    }
+}
+
+
+/* Para telas de celulares menores (até 480px de largura) */
+@media (max-width: 480px) {
+    
+    .hero-title {
+        font-size: 20vw; 
+    }
+
+    .about-text-container {
+        padding: 30px; 
+    }
+
+    .about-text-container h2 {
+        font-size: 2em;
+    }
+
+    .about-text-container p {
+        font-size: 1em;
+    }
+
+    /* Ajuste final da altura para celulares muito pequenos */
+    .about-images-container {
+        min-height: 400px; /* Altura mínima para celulares pequenos */
+    }
+}
