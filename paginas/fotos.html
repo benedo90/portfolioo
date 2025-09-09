@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b.fotos - Benedo</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme"> 
+    <header class="category-header">
+        <h1>Fotos</h1> 
+        <blockquote class="quote">
+            double-exposure e low shutter.
+        </blockquote>
+        <a href="../projetos.html" class="back-link">Voltar para Projetos</a>
+    </header>
+
+    <main class="project-category-gallery">
+        <div class="category-grid">
+
+            <a href="#" class="category-project-card" 
+               data-type="gallery" 
+               data-gallery="../media/fotos/cy/cyber5.jpg,../media/fotos/cy/cyber1.jpg,../media/fotos/cy/cyber2.jpg,../media/fotos/cy/cyber3.jpg,../media/fotos/cy/cyber4.jpg,../media/fotos/cy/cyber6.jpg" 
+               data-caption="[cybersigilism]">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/fotos/cy/cyber5.jpg');"></div>
+                <h3 class="category-card-title">[cybersigilism]</h3>
+            </a>
+
+            <a href="#" class="category-project-card" 
+               data-type="gallery"
+               data-gallery="../media/fotos/ror/ror6.jpg,../media/fotos/ror/ror1.jpg,../media/fotos/ror/ror2.jpg,../media/fotos/ror/ror3.jpg,../media/fotos/ror/ror4.jpg,../media/fotos/ror/ror5.jpg,../media/fotos/ror/ror7.jpg" 
+               data-caption="[rorschach]">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/fotos/ror/ror6.jpg');"></div>
+                <h3 class="category-card-title">[rorschach]</h3>
+            </a>
+            
+            <a href="#" class="category-project-card" 
+               data-type="gallery" 
+               data-gallery="../media/fotos/bbs/bb4.jpg,../media/fotos/bbs/bb1.jpg,../media/fotos/bbs/bb2.jpg,../media/fotos/bbs/bb3.jpg,../media/fotos/bbs/bb5.jpg,../media/fotos/bbs/bb6.jpg,../media/fotos/bbs/bb7.jpg,../media/fotos/bbs/bb8.jpg,../media/fotos/bbs/bb9.jpg,../media/fotos/bbs/bb10.jpg,../media/fotos/bbs/bb11.jpg,../media/fotos/bbs/bb12.jpg" 
+               data-caption="[valentines]">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/fotos/bbs/bb4.jpg');"></div>
+                <h3 class="category-card-title">[valentines]</h3>
+            </a>
+
+            <a href="#" class="category-project-card" 
+               data-type="gallery" 
+               data-gallery="../media/fotos/outros/o1.jpg,../media/fotos/outros/o2.jpg,../media/fotos/outros/o3.jpg,../media/fotos/outros/o4.jpg,../media/fotos/outros/o5.jpg" 
+               data-caption="[outros]">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/fotos/outros/o1.jpg');"></div>
+                <h3 class="category-card-title">[outros]</h3>
+            </a>
+
+        </div> </main>
+
+    <div id="lightbox-overlay">
+        <div class="lightbox-content">
+            <span id="close-lightbox" class="lightbox-btn">&times;</span>
+            <a id="prev-btn" class="lightbox-btn lightbox-nav">&#10094;</a>
+            
+            <div id="media-container">
+                <img id="lightbox-img" class="lightbox-media" src="" alt="Projeto em destaque">
+                <video id="lightbox-video" class="lightbox-media" controls autoplay muted loop>
+                    <source src="" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+
+            <a id="next-btn" class="lightbox-btn lightbox-nav">&#10095;</a>
+            <div id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

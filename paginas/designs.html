@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Nome da Página] - Benedo</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme"> 
+    <header class="category-header">
+        <h1>Designs</h1> 
+        <blockquote class="quote">
+            texturas e degradês.
+        </blockquote>
+        <a href="../projetos.html" class="back-link">Voltar para Projetos</a>
+    </header>
+
+    <main class="project-category-gallery">
+        <div class="category-grid">
+
+            <a href="#" class="category-project-card" 
+               data-type="gallery" 
+               data-gallery="../media/design/posters/tesão2.jpg,../media/design/posters/hv2.jpg,../media/design/posters/pattiv2.jpg,../media/design/posters/pierrotlefou.jpg,../media/design/posters/SEJA.jpg,../media/design/posters/sescpompeia.jpg,../media/design/posters/SIGA.jpg,../media/design/posters/thebeatlesposter.jpg,../media/design/posters/dnv.jpg,../media/design/posters/asaprocky.jpg" 
+               data-caption="[posters]">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/design/posters/thebeatlesposter.jpg');"></div>
+                <h3 class="category-card-title">[posters]</h3>
+            </a>
+
+            <a href="#" class="category-project-card" 
+               data-type="gallery"
+               data-gallery="../media/design/camp/NOIS.jpg,../media/design/camp/ANTI.jpg,../media/design/camp/valent1.jpg,../media/design/camp/gabis.jpg,../media/design/camp/inferno.jpg,../media/design/camp/storyfinal.jpg,../media/design/camp/storypapel.jpg,../media/design/camp/valent2.jpg,../media/design/camp/VISTA.jpg" 
+               data-caption="[campanhas antitese]">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/design/camp/NOIS.jpg');"></div>
+                <h3 class="category-card-title">[campanhas antitese]</h3>
+            </a>
+            
+            <a href="#" class="category-project-card" 
+               data-type="gallery" 
+               data-gallery="../media/design/capas/roupaverde.jpg,../media/design/capas/vh.jpg" 
+               data-caption="[capas]">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/design/capas/roupaverde.jpg');"></div>
+                <h3 class="category-card-title">[capas]</h3>
+            </a>
+
+            <a href="#" class="category-project-card" 
+               data-type="gallery" 
+               data-gallery="../media/design/piq/piqu.jpg,../media/design/piq/manual.jpg,../media/design/piq/piq3.jpg,../media/design/piq/piq4.jpg,../media/design/piq/piq5.jpg,../media/design/piq/piq6.jpg" 
+               data-caption="[piquenique surrealista]">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/design/piq/manual.jpg');"></div>
+                <h3 class="category-card-title">[piquenique surrealista]</h3>
+            </a>
+
+        </div> </main>
+
+    <div id="lightbox-overlay">
+        <div class="lightbox-content">
+            <span id="close-lightbox" class="lightbox-btn">&times;</span>
+            <a id="prev-btn" class="lightbox-btn lightbox-nav">&#10094;</a>
+            
+            <div id="media-container">
+                <img id="lightbox-img" class="lightbox-media" src="" alt="Projeto em destaque">
+                <video id="lightbox-video" class="lightbox-media" controls autoplay muted loop>
+                    <source src="" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+
+            <a id="next-btn" class="lightbox-btn lightbox-nav">&#10095;</a>
+            <div id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

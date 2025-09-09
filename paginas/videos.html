@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos - Benedo</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme"> 
+    <header class="category-header">
+        <h1>Vídeos</h1> 
+        <blockquote class="quote">
+          Crio narrativas do roteiro à edição. Eu escrevo, dirijo, gravo e edito.
+        </blockquote>
+        <a href="../projetos.html" class="back-link">Voltar para Projetos</a>
+    </header>
+
+    <main class="project-category-gallery">
+        <div class="category-grid">
+
+            <a href="#" class="category-project-card" 
+               data-type="video"
+               data-src="../media/videos/bebesvideo.mp4" 
+               data-caption="valentines surrealism">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/videos/capa-bebes.jpg');"></div>
+                <h3 class="category-card-title">[valentines surrealism]</h3>
+            </a>
+
+            <a href="#" class="category-project-card" 
+                data-type="video"
+               data-src="../media/videos/cablancav2.mp4"
+               data-caption="casablanca existentialism">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/videos/capa-casa.jpg');"></div>
+                <h3 class="category-card-title">[casablanca existentialism]</h3>
+            </a>
+
+            <a href="#" class="category-project-card"
+               data-type="video"
+               data-src="../media/videos/finala.mp4" 
+               data-caption="seja anti">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/videos/capa-ror.jpg');"></div>
+                <h3 class="category-card-title">[seja anti]</h3>
+            </a>
+
+            <a href="#" class="category-project-card"
+               data-type="video"
+               data-src="../media/videos/afefefr.mp4" 
+               data-caption="psicose">
+                <div class="category-card-image-placeholder" style="background-image: url('../media/videos/capa-vitao.jpg');"></div>
+                <h3 class="category-card-title">[psicose]</h3>
+            </a>
+
+        </div>
+    </main>
+
+    <div id="lightbox-overlay">
+        <div class="lightbox-content">
+            <span id="close-lightbox" class="lightbox-btn">&times;</span>
+            <a id="prev-btn" class="lightbox-btn lightbox-nav">&#10094;</a>
+            
+            <div id="media-container">
+                <img id="lightbox-img" class="lightbox-media" src="" alt="Projeto em destaque">
+                <video id="lightbox-video" class="lightbox-media" controls autoplay muted loop>
+                    <source src="" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+
+            <a id="next-btn" class="lightbox-btn lightbox-nav">&#10095;</a>
+            <div id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

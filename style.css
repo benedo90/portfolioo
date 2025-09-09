@@ -1,0 +1,636 @@
+/* --- Reset Básico e Estilos Globais --- */
+body {
+    margin: 0; /* Remove margens padrão do navegador */
+    font-family: 'Inter', sans-serif; /* Usa a fonte que importamos do Google */
+     --main-bg-color: #1a1a1a; /* Variável CSS para a cor de fundo */
+    background-color: var(--main-bg-color); /* Usa a variável */
+    color: #ffffff;
+    transition: background-color 0.8s ease-in-out; /* Transição suave para o fundo */
+}
+
+body.scrolled-to-about {
+    --main-bg-color: #ffffff; /* Mude a variável para branco quando a classe estiver ativa */
+    color: #333; /* Altera a cor do texto padrão para preto */
+}
+
+/* ... o restante do seu CSS ... */
+
+/* E certifique-se que o .about-section mantenha seu background-color: #ffffff; */
+/* para que ele sempre seja branco, mesmo quando o body estiver preto. */
+.about-section {
+    background-color: #ffffff; /* Fundo branco como solicitado */
+    color: #333; /* Cor do texto para contraste com o fundo branco */
+    padding: 80px 40px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* --- Estilização do TOPO --- */
+.site-header {
+    padding: 20px 40px; /* Espaçamento interno (vertical e horizontal) */
+}
+
+.main-nav {
+    display: flex; /* Ativa o Flexbox para alinhar itens */
+    justify-content: flex-end; /* Alinha o item (o link) à direita */
+}
+
+.main-nav a {
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efeito suave na cor ao passar o mouse */
+}
+
+.main-nav a:hover {
+    color: #a3a3a3; /* Cor do link ao passar o mouse */
+}
+
+
+/* --- Estilização do INÍCIO (Seção Hero) --- */
+.hero {
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Organiza os itens em coluna (um embaixo do outro) */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center; /* Centraliza o texto dentro dos elementos */
+    min-height: 80vh; /* Faz a seção ter no mínimo 80% da altura da tela */
+}
+
+.hero-title {
+    font-size: 9vw; /* Tamanho da fonte responsivo à largura da tela */
+    margin: 0; /* Remove margem padrão do h1 */
+    font-weight: 700;
+}
+
+.cta-button {
+    margin-top: 20px; /* Espaço entre o nome e o botão */
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: #1a1a1a; /* Cor do texto do botão */
+    padding: 30px 80px; /* Espaçamento interno do botão */
+    font-size: 25px;
+    border-radius: 50px; /* Bordas bem arredondadas */
+    font-weight: bold;
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    transition: transform 0.3s ease; /* Efeito suave no botão ao passar o mouse */
+}
+
+.cta-button:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do botão ao passar o mouse */
+}
+
+/* --- Estilização da Seção "Sobre Mim" --- */
+.about-section {
+    background-color: #ffffff; /* Fundo branco como solicitado */
+    color: #333; /* Cor do texto para contraste com o fundo branco */
+    padding: 80px 40px; /* Espaçamento interno */
+    min-height: 100vh; /* Garante que a seção ocupe pelo menos a altura da tela */
+    display: flex; /* Para centralizar o conteúdo verticalmente se for menor que 100vh */
+    align-items: center; /* Centraliza o conteúdo (about-content) */
+}
+
+.about-content {
+    display: flex; /* Ativa Flexbox para o layout de duas colunas */
+    gap: 60px; /* Espaço entre o retângulo de texto e as imagens */
+    max-width: 1200px; /* Largura máxima do conteúdo para não esticar demais */
+    margin: 0 auto; /* Centraliza o conteúdo na tela */
+    align-items: flex-start; /* Alinha verticalmente os itens (texto e imagens) */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+}
+
+.about-text-container {
+    flex: 2; /* Ocupa mais espaço que as imagens */
+    background-color: #f0f0f0; /* Fundo claro para o retângulo */
+    padding: 40px;
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+    display: flex; /* Para flexionar o conteúdo interno */
+    flex-direction: column; /* Conteúdo em coluna */
+    justify-content: center; /* Centraliza o texto verticalmente */
+    min-width: 300px; /* Largura mínima para o texto não ficar muito espremido */
+}
+
+.about-text-container h2 {
+    font-size: 3em; /* Tamanho do título "Sobre Mim" */
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.about-text-container p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.about-images-container {
+    flex: 1; /* Ocupa menos espaço que o texto */
+    display: flex;
+    flex-direction: column; /* Empilha os quadrados verticalmente */
+    gap: 30px; /* Espaço entre os quadrados */
+    align-items: center; /* Centraliza os quadrados se houver espaço extra */
+    position: relative; /* Necessário para o empilhamento e posicionamento */
+    padding: 30px; /* Espaçamento para as sombras e descolamento */
+}
+
+.image-placeholder {
+    width: 250px; /* Largura dos quadrados */
+    height: 250px; /* Altura dos quadrados (para ficarem quadrados) */
+    background-color: #ddd; /* Cor de preenchimento dos quadrados */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #555;
+    position: absolute; /* Para empilhamento */
+    transition: transform 0.3s ease; /* Transição para efeitos de hover futuro */
+}
+
+/* Posicionamento dos quadrados para empilhamento */
+.placeholder-one {
+    top: 0;
+    left: 0;
+    z-index: 3; /* Mais acima */
+    transform: rotate(-5deg); /* Levemente rotacionado */
+}
+.placeholder-two {
+    top: 200px; /* Desloca para baixo */
+    left: 80px; /* Desloca para a direita */
+    z-index: 2; /* Meio */
+    transform: rotate(5deg); /* Levemente rotacionado na outra direção */
+}
+.placeholder-three {
+    top: 360px; /* Desloca mais para baixo */
+    left: 10px; /* Desloca um pouco para a direita */
+    z-index: 1; /* Mais abaixo */
+    transform: rotate(-2deg); /* Levemente rotacionado */
+}
+
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column; /* Coloca os itens em coluna em telas menores */
+        gap: 40px;
+    }
+    .about-text-container,
+    .about-images-container {
+        flex: none; /* Remove a flexibilidade para eles ocuparem 100% da largura */
+        width: 100%;
+    }
+    .about-images-container {
+        padding: 0; /* Remove padding extra em telas pequenas */
+        height: 500px; /* Altura fixa para manter o empilhamento */
+    }
+    .image-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+    /* Ajusta o posicionamento em telas menores */
+    .placeholder-one { top: 0; left: 50%; transform: translateX(-50%) rotate(-5deg); }
+    .placeholder-two { top: 100px; left: 50%; transform: translateX(-50%) rotate(5deg); }
+    .placeholder-three { top: 200px; left: 50%; transform: translateX(-50%) rotate(-2deg); }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 15px 20px;
+    }
+    .hero-title {
+        font-size: 15vw; /* Aumenta um pouco para não ficar pequeno demais */
+    }
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    .about-section {
+        padding: 60px 20px;
+    }
+    .about-text-container h2 {
+        font-size: 2.2em;
+    }
+    .image-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+    .placeholder-one { top: 0; left: 50%; transform: translateX(-50%) rotate(-5deg); }
+    .placeholder-two { top: 80px; left: 50%; transform: translateX(-50%) rotate(5deg); }
+    .placeholder-three { top: 160px; left: 50%; transform: translateX(-50%) rotate(-2deg); }
+}
+
+/* --- Estilos da Página de Projetos --- */
+
+/* Força o tema claro para páginas específicas */
+body.light-theme {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* --- Estilos para o Tema Escuro --- */
+body.dark-theme {
+    background-color: #1a1a1a; /* Fundo preto */
+    color: #ffffff; /* Letras brancas */
+}
+
+/* Garante que elementos específicos dentro do tema escuro fiquem visíveis */
+.dark-theme .page-header h1,
+.dark-theme .card-title {
+    color: #ffffff;
+}
+.dark-theme .back-link {
+    color: #a3a3a3; /* Um cinza claro para o link de voltar */
+}
+/* Se houver outros elementos que precisam mudar de cor no tema escuro, adicione-os aqui */
+
+.page-header {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+}
+
+.page-header h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #555;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.project-gallery {
+    padding: 0 40px 60px 40px;
+}
+
+.project-grid {
+    display: grid;
+    /* Cria colunas responsivas: elas terão no mínimo 300px e no máximo 1 fração do espaço.
+       O navegador ajustará o número de colunas automaticamente. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Espaçamento entre os retângulos */
+    max-width: 1400px;
+    margin: 0 auto; /* Centraliza a grade */
+}
+
+.project-card {
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave no hover */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Move o card um pouco para cima */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card-image-placeholder {
+    height: 350px; /* Altura dos retângulos */
+    background-color: #e0e0e0; /* Cor de fundo provisória */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    /* Se quiser colocar uma imagem de fundo depois, use:
+       background-image: url('caminho/para/sua/imagem.jpg');
+       background-size: cover;
+       background-position: center;
+    */
+}
+
+/* --- Estilos para o Cabeçalho da Categoria (Páginas de Destino) --- */
+.category-header {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+}
+
+.category-header h1 {
+    font-size: 3.5em;
+    margin: 0 0 20px 0;
+}
+
+.quote {
+    font-family: 'comic-sans', serif; /* Fonte mais elegante para a citação */
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.quote cite {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.8em;
+    font-style: normal;
+    opacity: 0.8;
+}
+
+/* Link de voltar - ajustado para o tema escuro/claro */
+.category-header .back-link {
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    /* As cores serão definidas pelo body.light-theme ou body.dark-theme */
+}
+
+/* --- Estilos para a Galeria de Projetos dentro da Categoria --- */
+.project-category-gallery {
+    padding: 0 40px 60px 40px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 4 colunas em telas grandes */
+    gap: 40px;
+    max-width: 1200px; /* Um pouco menor que a página de projetos principal */
+    margin: 0 auto;
+}
+
+.category-project-card {
+    text-decoration: none;
+    color: inherit; /* Herdará a cor do body (branco ou preto) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Para centralizar o título abaixo da imagem */
+    flex-direction: column;
+}
+
+.category-project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.category-card-image-placeholder {
+  
+    width: 100%;
+    padding-bottom: 75%;
+    background-color: #555;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+
+    /* ---- ADICIONE !important AQUI ---- */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+    
+
+
+.category-card-title {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    .category-header h1 {
+        font-size: 2.5em;
+    }
+    .quote {
+        font-size: 1.2em;
+        padding: 0 20px;
+    }
+    .project-category-gallery {
+        padding: 0 20px 40px 20px;
+    }
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-header {
+        padding: 40px 15px 30px 15px;
+    }
+    .category-header h1 {
+        font-size: 2em;
+    }
+    .quote {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    .category-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+}
+
+/* --- Estilos do Lightbox --- */
+#lightbox-overlay {
+    position: fixed; /* Fica fixo na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Garante que fique na frente de tudo */
+    
+    /* Inicialmente oculto com transição suave */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#lightbox-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox-img {
+    max-width: 100%;
+    max-height: 85vh; /* Imagem ocupa no máximo 85% da altura da tela */
+    object-fit: contain; /* Garante que a imagem inteira apareça sem distorcer */
+}
+
+#lightbox-caption {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+/* Estilo dos Botões */
+.lightbox-btn {
+    position: absolute;
+    color: #fff;
+    font-size: 2.5em;
+    cursor: pointer;
+    user-select: none; /* Impede que o texto seja selecionado */
+    transition: color 0.2s ease;
+}
+
+.lightbox-btn:hover {
+    color: #bbb;
+}
+
+#close-lightbox {
+    top: 15px;
+    right: 25px;
+    font-size: 3em;
+}
+
+.lightbox-nav {
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+}
+
+#prev-btn { left: 15px; }
+#next-btn { right: 15px; }
+
+/* --- Ajustes no CSS do Lightbox para Vídeo --- */
+
+#media-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTA REGRA ESCONDE AMBOS POR PADRÃO */
+.lightbox-media {
+    display: none; 
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+/* ESTA REGRA MOSTRA APENAS O ELEMENTO ATIVO */
+.lightbox-media.active {
+    display: block;
+}
+
+#lightbox-video {
+    outline: none; 
+}
+
+/* --- Imagens para os Placeholders da Página Inicial --- */
+
+/* Primeiro, garantimos que a imagem se ajuste bem em QUALQUER placeholder */
+.image-placeholder {
+    /* Suas regras existentes como width, height, position, etc. devem estar aqui */
+    
+    /* ADICIONE/VERIFIQUE ESTAS PROPRIEDADES */
+    background-size: cover;       /* Faz a imagem cobrir todo o espaço sem distorcer */
+    background-position: center;  /* Centraliza a imagem no quadrado */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-color: #ddd;       /* Cor de fundo enquanto a imagem carrega */
+}
+
+/* Agora, definimos a imagem específica para cada quadrado */
+.placeholder-one {
+    background-image: url('media/eu/eu.jpg');
+}
+
+.placeholder-two {
+    background-image: url('media/eu/eu3.jpg');
+}
+
+.placeholder-three {
+    background-image: url('media/eu/eu2.jpg');
+}
+
+
+/* --- EFEITO HOVER COM GIF NA PÁGINA DE PROJETOS --- */
+
+/* 1. Substitua o estilo do placeholder antigo por este novo container */
+.card-image-container {
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative; /* Essencial para sobrepor as camadas */
+    overflow: hidden;   /* Garante que as imagens fiquem dentro das bordas arredondadas */
+    background-color: #e0e0e0; /* Cor de fundo enquanto as imagens carregam */
+}
+
+/* 2. Estilo base para as duas camadas (imagem estática e GIF) */
+.static-image,
+.animated-gif {
+    position: absolute; /* Coloca uma camada sobre a outra */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Garante que a imagem/gif preencha o espaço corretamente */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Transição suave para o GIF aparecer */
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* 3. Por padrão, o GIF começa invisível */
+.animated-gif {
+    opacity: 0;
+}
+
+/* 4. A MÁGICA: Quando o mouse passar sobre o .project-card, o GIF fica visível */
+.project-card:hover .animated-gif {
+    opacity: 1;
+}
+
+/* 5. AGORA, DEFINA AS IMAGENS E GIFS PARA CADA CARD ESPECÍFICO */
+
+/* Card de Designs */
+.card-designs .static-image {
+    background-image: url('../media/design/capas/roupaverde.jpg');
+}
+.card-designs .animated-gif {
+    background-image: url('../media/design/designs.gif');
+}
+
+/* Card de Fotos */
+.card-fotos .static-image {
+    background-image: url('../media/fotos/cy/cyber3.jpg');
+}
+.card-fotos .animated-gif {
+    background-image: url('../media/fotos/fotos.gif');
+}
+
+/* Card de Vídeos */
+.card-videos .static-image {
+    background-image: url('../media/videos/capa-bebes.jpg');
+}
+.card-videos .animated-gif {
+    background-image: url('../media/videos/bbs.gif');
+}
+
+/* Card de Ilustrações */
+.card-ilustracoes .static-image {
+    background-image: url('../media/projetos/capa-ilustracoes.jpg');
+}
+.card-ilustracoes .animated-gif {
+    background-image: url('../media/projetos/preview-ilustracoes.gif');
+}
