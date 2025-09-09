@@ -605,32 +605,32 @@ body.dark-theme {
 
 /* Card de Designs */
 .card-designs .static-image {
-    background-image: url('../media/design/capas/roupaverde.jpg');
+    background-image: url('media/design/capas/roupaverde.jpg');
 }
 .card-designs .animated-gif {
-    background-image: url('../media/design/designs.gif');
+    background-image: url('media/design/designs.gif');
 }
 
 /* Card de Fotos */
 .card-fotos .static-image {
-    background-image: url('../media/fotos/cy/cyber3.jpg');
+    background-image: url('media/fotos/cy/cyber3.jpg');
 }
 .card-fotos .animated-gif {
-    background-image: url('../media/fotos/fotos.gif');
+    background-image: url('media/fotos/fotos.gif');
 }
 
 /* Card de Vídeos */
 .card-videos .static-image {
-    background-image: url('../media/videos/capa-bebes.jpg');
+    background-image: url('media/videos/capa-bebes.jpg');
 }
 .card-videos .animated-gif {
-    background-image: url('../media/videos/bbs.gif');
+    background-image: url('media/videos/bbs.gif');
 }
 
 /* Card de Ilustrações */
 .card-ilustracoes .static-image {
-    background-image: url('../media/projetos/capa-ilustracoes.jpg');
+    background-image: url('media/projetos/capa-ilustracoes.jpg');
 }
 .card-ilustracoes .animated-gif {
-    background-image: url('../media/projetos/preview-ilustracoes.gif');
+    background-image: url('media/projetos/preview-ilustracoes.gif');
 }
