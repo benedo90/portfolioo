@@ -765,3 +765,25 @@ body.dark-theme {
         min-height: 400px; /* Altura mínima para celulares pequenos */
     }
 }
+
+/* --- Ajustes de Camada (z-index) para o Lightbox --- */
+
+/* Garante que a mídia fique numa camada de base */
+#media-container {
+    position: relative; /* Necessário para z-index funcionar */
+    z-index: 1000;
+}
+
+/* Garante que os botões fiquem na camada superior, na frente da mídia */
+.lightbox-btn {
+    position: absolute;
+    z-index: 1010; /* Um valor MAIOR que o da mídia */
+    /* ...suas outras propriedades como color, font-size, etc... */
+}
+
+/* BÔNUS: Aumenta a área de clique do botão de fechar no celular */
+#close-lightbox {
+    top: 0;
+    right: 0;
+    padding: 15px; /* Cria uma "borda" invisível que aumenta a área de toque */
+}
